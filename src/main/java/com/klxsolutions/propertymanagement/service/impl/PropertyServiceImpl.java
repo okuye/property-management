@@ -6,7 +6,6 @@ import com.klxsolutions.propertymanagement.entity.PropertyEntity;
 import com.klxsolutions.propertymanagement.repository.PropertyRepository;
 import com.klxsolutions.propertymanagement.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.PropertyMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -48,7 +47,7 @@ public class PropertyServiceImpl implements PropertyService {
             PropertyEntity propertyEntity = optEn.get(); //Data from the database
             propertyEntity.setTitle(propertyDTO.getTitle());
             propertyEntity.setAddress(propertyDTO.getAddress());
-            propertyEntity.setPrice(propertyDTO.getPrice().toString());
+            propertyEntity.setPrice(propertyDTO.getPrice());
             propertyEntity.setDescription(propertyDTO.getDescription());
             dto = propertyConverter.convertEntityToDTO(propertyEntity);
             propertyRepository.save(propertyEntity);
