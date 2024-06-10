@@ -9,10 +9,9 @@ public class PropertyDTO {
     private Long id;
     private String  title;
     private String  description;
-    private String  ownerName;
-    private String  ownerEmail;
     private String  price;
     private String  address;
+    private Long    userId;
 
     /*public String getTitle() {
         return title;
